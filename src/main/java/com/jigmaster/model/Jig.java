@@ -26,7 +26,7 @@ public class Jig {
     @Column(name= "cor_cabeca", length = 30)
     private String corCabeca;
     @Column(name= "cor_pelo", nullable = false, length = 30)
-    @NotBlank(message = "Cor do pelo é obrigatório")
+    @NotBlank(message = "Cor do pelo é obrigatória")
     private String corPelo;
     @Column(nullable = false)
     @NotNull

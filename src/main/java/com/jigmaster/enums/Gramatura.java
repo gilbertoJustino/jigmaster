@@ -7,9 +7,9 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @Getter
 public enum Gramatura {
-    SETE_GRAMAS(7,new BigDecimal("10.00")),
-    DEZ_GRAMAS(10, new BigDecimal("10.00")),
-    QUINZE_GRAMAS(15, new BigDecimal("12.00"));
+    SETE(7,new BigDecimal("10.00")),
+    DEZ(10, new BigDecimal("10.00")),
+    QUINZE(15, new BigDecimal("12.00"));
     private final Integer valor;
     private final BigDecimal preco;
 
