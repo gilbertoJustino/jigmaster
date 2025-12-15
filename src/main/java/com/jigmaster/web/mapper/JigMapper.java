@@ -1,8 +1,6 @@
 package com.jigmaster.web.mapper;
 
-import com.jigmaster.model.Cliente;
 import com.jigmaster.model.Jig;
-import com.jigmaster.web.dto.ClienteRequestDto;
 import com.jigmaster.web.dto.JigRequestDto;
 import com.jigmaster.web.dto.JigResponseDto;
 import lombok.AccessLevel;
@@ -21,8 +19,4 @@ public class JigMapper {
         return modelMapper.map(jig, JigResponseDto.class);
     }
 
-    public static Cliente toCliente(ClienteRequestDto ClienteRequestDto) {
-        return modelMapper.map(ClienteRequestDto, Cliente.class);
-
-    }
 }

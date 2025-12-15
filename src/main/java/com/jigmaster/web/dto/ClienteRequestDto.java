@@ -4,17 +4,22 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.*;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@Builder
 public class ClienteRequestDto {
 
     @NotBlank(message = "O Nome é obrigatório")
-    @Size(min = 3, max = 50)
+    @Size(min = 3, max = 50, message = "Nome deve ter entre 3 e 100 caracteres")
     private String nome;
-    @Email(regexp = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$",
-            message = "Email inválido")
+    @Email(message = "Email inválido")
     private String email;
     @NotBlank(message = "Telefone é obrigatório")
-    @Size(min = 8, max = 13)
+    @Size(min = 8, max = 15, message = "Telefone deve ter entre 8 e 15 caracteres")
     private String telefone;
     @Valid
     private EnderecoRequestDto endereco;
